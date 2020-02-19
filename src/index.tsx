@@ -7,10 +7,12 @@ import {createStore} from "redux";
 import rootReducer from "./store";
 import App from "./components/App";
 
+//Создаём экземпляр стора на основании редьюсеров (так как там прописано как на какие экшены реагировать, инит стор и тд)
 const store = createStore(rootReducer);
 
 
 ReactDOM.render(
+    //Оборачиваем приложение в редакс (из всего дом дерева будет доступен сейчас стор с плюшками)
     <Provider store={store}>
         <div className="App">
             <App/>

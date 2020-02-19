@@ -2,8 +2,11 @@ import React from 'react'
 import Todo from './Todo'
 import {TodoInterface} from "../interfaces/todo.interface";
 
+// Интерфейс пропсов TodoList компонента
 interface Props {
+    //Описывам, что приходит массив из тудушек
     todos: TodoInterface[],
+    //Описываем, что приходит фукция, которая принимает число и ничего не возвращает
     toggleTodo: (todoId: number) => void;
 }
 

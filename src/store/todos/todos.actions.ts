@@ -1,6 +1,7 @@
 import {TodoInterface} from "../../interfaces/todo.interface";
 import {Action} from "../interfaces/action.interface";
 
+// Для удобства создаём список экшенов (именно их строковых типов)
 export const Actions = {
     ADD_TODO: '[todo] Add todo',
     UPDATE_TODO: '[todo] Update todo',
@@ -8,6 +9,10 @@ export const Actions = {
     TOGGLE_TODO: '[todo] Toggle todo',
 };
 
+// Создаём генераторы экшенов - функции, которые будут возвращать объекты с полями type и payload
+// (в данном примере так сделал, так как в принципе неплохая практика следовать такому интерфейсу)
+// можно глянуть реализацию самого интерфейса
+// В пэйлоад бросаем тот тип данных, который указан у экшена в дженерике (повторю: реализация может быть разная, предлагаю к рассмотрению данную)
 export const addTodoAction = (text: string): Action<TodoInterface> => ({
     type: Actions.ADD_TODO,
     payload: {

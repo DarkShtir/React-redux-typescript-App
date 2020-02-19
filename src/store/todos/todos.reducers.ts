@@ -3,16 +3,17 @@ import {TodoInterface} from "../../interfaces/todo.interface";
 import * as R from 'ramda';
 import {Action} from "../interfaces/action.interface";
 
+//Прописыаем интерфейс для раздела стора
 export interface State {
     todoList: TodoInterface[]
 }
-
+// задаём какие-либо инит значения в соответсвии с интерфейсом (для первого запуска)
 const initialState: State = {
     todoList: []
 };
 
+// Описываем редьюсер (то как мы будем менять стэйт)
 export const reducer = (state: State = initialState, action: Action<any>) => {
-    console.log(state);
     switch (action.type) {
         case Actions.ADD_TODO:
             return {

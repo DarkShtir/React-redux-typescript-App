@@ -1,3 +1,4 @@
+//Интерфейс тудушки
 export interface TodoInterface {
     id: number;
     text: string;

@@ -1,6 +1,7 @@
 import React from "react";
 
 interface Props {
+    //Описываем, что приходит функция, которая принимает евент
     onClick: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
     completed?: boolean;
     text: string;
